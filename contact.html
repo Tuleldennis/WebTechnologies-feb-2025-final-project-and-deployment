@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us – Tech Haven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tech Haven</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Get in Touch</h2>
+    <form id="contact-form" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required minlength="2">
+      <small class="error" id="error-name"></small>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+      <small class="error" id="error-email"></small>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+      <small class="error" id="error-message"></small>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tech Haven</p>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+      const name = this.name;
+      const errName = document.getElementById('error-name');
+      if (name.value.trim().length < 2) { errName.textContent = 'Name must be at least 2 characters.'; valid = false; } else { errName.textContent = ''; }
+      const email = this.email;
+      const errEmail = document.getElementById('error-email');
+      const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      if (!emailPattern.test(email.value)) { errEmail.textContent = 'Enter a valid email.'; valid = false; } else { errEmail.textContent = ''; }
+      const msg = this.message;
+      const errMsg = document.getElementById('error-message');
+      if (msg.value.trim().length < 10) { errMsg.textContent = 'Message must be at least 10 characters.'; valid = false; } else { errMsg.textContent = ''; }
+      if (valid) { alert(`Thank you, ${name.value}! We received your message.`); this.reset(); }
+    });
+  </script>
+</body>
+</html>
+>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products – Tech Haven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tech Haven</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Products</h2>
+
+    <div id="filter-buttons">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('accessory')">Accessories</button>
+    </div>
+
+    <section class="product-grid">
+      <h3 id="accessories" class="sr-only">Accessories</h3>
+
+      <div class="product accessory">
+        <img src="https://images.pexels.com/photos/31915115/pexels-photo-31915115/free-photo-of-sleek-black-wireless-mouse-on-yellow-background.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Wireless Mouse">
+        <h4>Wireless Mouse</h4>
+        <p>Ergonomic design, long battery life.</p>
+        <p class="price">$49.00</p>
+        <button class="add-to-cart" data-name="Wireless Mouse" data-price="49">Add to Cart</button>
+      </div>
+
+      <div class="product accessory">
+        <img src="https://images.pexels.com/photos/17479952/pexels-photo-17479952/free-photo-of-a-modern-keyboard-on-a-desk.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mechanical Keyboard">
+        <h4>Mechanical Keyboard</h4>
+        <p>RGB backlit, tactile switches.</p>
+        <p class="price">$129.00</p>
+        <button class="add-to-cart" data-name="Mechanical Keyboard" data-price="129">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tech Haven</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
