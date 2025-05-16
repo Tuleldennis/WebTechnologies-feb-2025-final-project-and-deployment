@@ -1,6 +1,6 @@
 # Tech Haven E-commerce Website
 
-**Live Site:** [Your Deployed URL Here]
+**Live Site:** [https://tuleldennis.github.io/WebTechnologies-feb-2025-final-project-and-deployment/]
 
 ## Overview
 Mini e-commerce site demonstrating HTML5, CSS3, JavaScript, and deployment.
